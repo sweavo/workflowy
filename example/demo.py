@@ -2,5 +2,7 @@ import opml
 
 outline=opml.parse('export.opml')
 
-print(outline.__dict__)
-
+for element in outline:
+    print(element.text)
+    for subelement in element:
+        print("  " + subelement.text)
