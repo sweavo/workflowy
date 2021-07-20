@@ -3,8 +3,15 @@ import opml
 outline=opml.parse('export.opml')
 
 def descend(node, depth=0):
-    print( "  " * depth + "- " + node.text )
+    if hasattr(node,'text'):
+        print( "  " * depth + "- " + node.text )
+    else:
+        print('(no text)')
+
+    if hasattr(node,'_note'):
+        print( "  " * depth + "  _" + node._note + "_" )
+
     for subelement in node:
         descend(subelement, depth+1)
 
-descend(outline[0])
+descend(outline)
