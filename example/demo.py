@@ -2,5 +2,5 @@ import opml
 
 outline=opml.parse('export.opml')
 
-print(outline)
+print(outline.__dict__)
 
