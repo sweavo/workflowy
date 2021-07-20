@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <ownerEmail>
+      sweavo@gmail.com
+    </ownerEmail>
+  </head>
+  <body>
+    <outline text="Export Me &lt;b&gt;bold &lt;/b&gt;&lt;i&gt;italic &lt;/i&gt;&lt;u&gt;underline&lt;/u&gt; &lt;a href=&quot;http://google.com&quot;&gt;link&lt;/a&gt;: #hashtag" _note="&lt;b&gt;bold &lt;/b&gt;&lt;i&gt;italic &lt;/i&gt;&lt;u&gt;underline&lt;/u&gt; &lt;a href=&quot;http://google.com/&quot;&gt;link&lt;/a&gt;">
+      <outline text="First child" />
+      <outline text="Second Child, expanded">
+        <outline text="&lt;i&gt;&lt;u&gt;First &lt;/u&gt;&lt;/i&gt;grandchild" _note="With note &lt;b&gt;bold &lt;/b&gt;&lt;i&gt;italic &lt;/i&gt;&lt;u&gt;underline&lt;/u&gt; &lt;a href=&quot;http://google.com/&quot;&gt;link&lt;/a&gt;" />
+        <outline text="&lt;b&gt;&lt;i&gt;Second &lt;/i&gt;&lt;/b&gt;grandchild" />
+      </outline>
+      <outline text="Third child, collapsed" _note="Has a multiline&#10;note that goes on &#10;for a while&#10;with a #hashtag ">
+        <outline text="&lt;i&gt;Third &lt;/i&gt;Grandchild" />
+        <outline text="&lt;b&gt;Fourth &lt;/b&gt;Grandchild" />
+      </outline>
+    </outline>
+  </body>
+</opml>
