@@ -14,4 +14,5 @@ def descend(node, depth=0):
     for subelement in node:
         descend(subelement, depth+1)
 
-descend(outline)
+if __name__ == "__main__":
+    descend(outline)
