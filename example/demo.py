@@ -1,18 +1,24 @@
 import opml
 
-outline=opml.parse('export.opml')
+class Outline(object):
+    def __init__(self, node ):
+        if hasattr(node,'text'):
+            self.text=node.text
+        else:
+            self.text=None
+        if hasattr(node,'_note'):
+            self.note=node._note
+        else:
+            self.note=None
+        self.children=list(map(Outline,node))
 
-def descend(node, depth=0):
-    if hasattr(node,'text'):
-        print( "  " * depth + "- " + node.text )
-    else:
-        print('(no text)')
-
-    if hasattr(node,'_note'):
-        print( "  " * depth + "  _" + node._note + "_" )
-
-    for subelement in node:
-        descend(subelement, depth+1)
+    def __repr__(self):
+        return f'Outline({self.text!r},{self.note!r},{self.children!r})'
 
 if __name__ == "__main__":
-    descend(outline)
+
+    outline=Outline(opml.parse('export.opml'))
+
+    print(outline)
+
+
